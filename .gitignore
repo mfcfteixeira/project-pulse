@@ -1,0 +1,29 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/
+**/dependency-reduced-pom.xml
+
+# IntelliJ / IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# OS / Misc
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+.env
+
+# DBeaver
+.dbeaver*

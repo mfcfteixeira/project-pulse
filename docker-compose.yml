@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16
+    container_name: pulse-db
+    environment:
+      POSTGRES_USER: pulse
+      POSTGRES_PASSWORD: pulse123
+      POSTGRES_DB: pulse_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pulse_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pulse"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  pulse_data:
+
